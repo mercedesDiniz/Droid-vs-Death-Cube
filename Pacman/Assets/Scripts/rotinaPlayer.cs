@@ -63,10 +63,11 @@ public class rotinaPlayer : MonoBehaviour
 
     // Detecta colisão com os Inimigos
     private void OnCollisionEnter(Collision collision) {
-        if(collision.gameObject.CompareTag("inimigoR") || collision.gameObject.CompareTag("inimigoG") || collision.gameObject.CompareTag("inimigoB")){
+        if(collision.gameObject.CompareTag("InimigoR") || collision.gameObject.CompareTag("InimigoG") || collision.gameObject.CompareTag("InimigoB")){
             Destroy(gameObject);
         }
     }
+
 }
 
 
