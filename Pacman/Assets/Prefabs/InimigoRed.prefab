@@ -1582,10 +1582,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5630397400111603707}
-  - component: {fileID: 6995150127215589752}
   - component: {fileID: 7988552705427942580}
-  - component: {fileID: 1026655897779812573}
   - component: {fileID: 5690301464126533741}
+  - component: {fileID: -8319707067452215223}
+  - component: {fileID: -6783516871549823234}
   m_Layer: 0
   m_Name: InimigoRed
   m_TagString: InimigoR
@@ -1612,24 +1612,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!143 &6995150127215589752
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5001493909455439169}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 4.65
-  m_Radius: 1.37
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 2.43, z: 0}
 --- !u!95 &7988552705427942580
 Animator:
   serializedVersion: 5
@@ -1651,18 +1633,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1026655897779812573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5001493909455439169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 416ce20be118bc94eba45e574c6543f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &5690301464126533741
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1679,6 +1649,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &-8319707067452215223
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5001493909455439169}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-6783516871549823234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5001493909455439169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b94d10413bbe409e98cea34b83ee547, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5106221916381826124
 GameObject:
   m_ObjectHideFlags: 0
