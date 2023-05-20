@@ -8,7 +8,7 @@ public class rotinaPlayer : MonoBehaviour
     private Animator animator; //
     private Vector3 inputs; //receber as entradas do teclado
 
-    private float velocidade = 5f; //controla a velocidade do jogador
+    private float velocidade = 7.5f; //controla a velocidade do jogador
 
     private Transform myCamera;
 
@@ -33,7 +33,7 @@ public class rotinaPlayer : MonoBehaviour
 
         Vector3 direcao = inputs.x * right + inputs.z * forward;
 
-        if (inputs != Vector3.zero && direcao.magnitude >0.1f)
+        if (inputs != Vector3.zero && direcao.magnitude >0.1f && animator.GetBool("morreu") == false)
         {
             Quaternion freeRotation = Quaternion.LookRotation(direcao.normalized, transform.up);
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(new Vector3(transform.eulerAngles.x, freeRotation.eulerAngles.y, transform.eulerAngles.z)), 10 * Time.deltaTime);
@@ -41,20 +41,20 @@ public class rotinaPlayer : MonoBehaviour
 
 
 
-        if(Input.GetKey(KeyCode.Space))
+        if(Input.GetKey(KeyCode.Space) && animator.GetBool("morreu") == false)
         {
             animator.SetBool("soco", true);
             animator.SetBool("andando", false);
             inputs = Vector3.zero;
         }
-        else if (inputs != Vector3.zero && Input.GetKey(KeyCode.Space)==false)
+        else if (inputs != Vector3.zero && Input.GetKey(KeyCode.Space)==false && animator.GetBool("morreu") == false)
         {
             character.Move(transform.forward * inputs.magnitude* Time.deltaTime * velocidade);
             animator.SetBool("andando", true);
             animator.SetBool("soco", false);
             //transform.forward = Vector3.Slerp(transform.forward, inputs, Time.deltaTime*10); //suavizar a rotação do personagem
         }
-        else if (inputs == Vector3.zero && Input.GetKey(KeyCode.Space)==false)
+        else if (inputs == Vector3.zero && Input.GetKey(KeyCode.Space)==false && animator.GetBool("morreu") == false)
         {
             animator.SetBool("andando", false);
             animator.SetBool("soco", false);
@@ -62,9 +62,11 @@ public class rotinaPlayer : MonoBehaviour
     }
 
     // Detecta colisão com os Inimigos
-    private void OnCollisionEnter(Collision collision) {
+    private void OnCollisionStay(Collision collision) {
         if(collision.gameObject.CompareTag("InimigoR") || collision.gameObject.CompareTag("InimigoG") || collision.gameObject.CompareTag("InimigoB")){
-            Destroy(gameObject);
+            animator.SetBool("morreu", true);
+            // gameObject.SetActive(false);
+            // Destroy(gameObject);
         }
     }
 
