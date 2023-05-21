@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rotinaInimigos : MonoBehaviour
+public class rotinaInimigosB : MonoBehaviour
 {   
     private Animator animator;
     private GameObject player; // Referência para o objeto do jogador

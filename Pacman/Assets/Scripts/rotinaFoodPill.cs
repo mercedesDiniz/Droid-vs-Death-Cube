@@ -22,7 +22,7 @@ public class rotinaFoodPill : MonoBehaviour
         
     }
 
-    // Detecta colisão com os Inimigos
+    // Detecta colisão com o Player os Inimigos G
     private void OnCollisionStay(Collision collision) {
         if(collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("InimigoG")){
 
