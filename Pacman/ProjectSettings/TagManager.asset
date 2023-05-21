@@ -11,6 +11,8 @@ TagManager:
   - InimigoG
   - InimigoR
   - player
+  - foodPill
+  - powerPill
   layers:
   - Default
   - TransparentFX
