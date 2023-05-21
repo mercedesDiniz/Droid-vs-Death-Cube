@@ -9,6 +9,7 @@ public class rotinaPlayer : MonoBehaviour
     private Vector3 inputs; //receber as entradas do teclado
 
     private float velocidade = 7.5f; //controla a velocidade do jogador
+    public float destroyDelay = 0.5f; // Tempo de espera antes de destruir o objeto inimigo
 
     private Transform myCamera;
 
@@ -65,9 +66,14 @@ public class rotinaPlayer : MonoBehaviour
     private void OnCollisionStay(Collision collision) {
         if(collision.gameObject.CompareTag("InimigoR") || collision.gameObject.CompareTag("InimigoG") || collision.gameObject.CompareTag("InimigoB")){
             animator.SetBool("morreu", true);
-            // gameObject.SetActive(false);
-            // Destroy(gameObject);
+            // Aguarda o atraso antes de destruir o objeto inimigo
+            Invoke("DestroyEnemy", destroyDelay);
         }
+    }
+
+    private void DestroyEnemy()
+    {
+        Destroy(gameObject);
     }
 
 }
