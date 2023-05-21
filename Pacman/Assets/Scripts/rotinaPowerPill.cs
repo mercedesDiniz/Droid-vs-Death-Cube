@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class rotinaPowerPill : MonoBehaviour
 {
-    public float scaleSpeed = 0.5f; // Velocidade de redução da escala
+    public float scaleSpeed = 0.8f; // Velocidade de redução da escala
     public float destroyDelay = 2f; // Tempo de espera antes de destruir o objeto após desaparecer
 
     private Vector3 initialScale;
