@@ -32,3 +32,5 @@ Descrever e Implementar um ambiente com a ferramenta (Unity) atrav√©s da defini√
 - [Occlusion culling](https://docs.unity3d.com/Manual/OcclusionCulling.html)
 - [Chomp Man - 3D Game Kit & Tutorial](https://assetstore.unity.com/packages/templates/tutorials/chomp-man-3d-game-kit-tutorial-174982)
 - [Animated Robot Pack](https://quaternius.com/packs/animatedrobot.html)
+- [Magic Effects](https://assetstore.unity.com/packages/vfx/particles/spells/magic-effects-free-247933)
+- [Skybox Series](https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633#content)
