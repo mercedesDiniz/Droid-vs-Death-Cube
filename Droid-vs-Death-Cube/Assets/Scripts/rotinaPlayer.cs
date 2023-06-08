@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class rotinaPlayer : MonoBehaviour
 {
+    [SerializeField] private string telaGamerOver;
+    [SerializeField] private string telaVictory;
+    
     private CharacterController character; //referencia os componentes de controle do jogador
     private Animator animator; //
     private Vector3 inputs; //receber as entradas do teclado
@@ -74,6 +78,7 @@ public class rotinaPlayer : MonoBehaviour
     private void DestroyEnemy()
     {
         Destroy(gameObject);
+        SceneManager.LoadScene(telaGamerOver);
     }
 
 }
