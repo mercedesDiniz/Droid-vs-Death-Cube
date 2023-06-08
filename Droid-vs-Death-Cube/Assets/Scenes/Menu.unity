@@ -2733,7 +2733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60464d3fd271315b5b19ef3ead22e57a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomeDoNivel: TesteCube
+  nomeDoNivel: Game
   painelMenuPrincipl: {fileID: 971008671}
   painelOpcoes: {fileID: 1115949710}
 --- !u!1 &1850270220

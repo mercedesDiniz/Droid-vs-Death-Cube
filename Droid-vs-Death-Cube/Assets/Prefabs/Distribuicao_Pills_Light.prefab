@@ -292,7 +292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8678274930284113395}
   m_Layer: 0
-  m_Name: Distribuicao_Pills02
+  m_Name: Distribuicao_Pills_Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
