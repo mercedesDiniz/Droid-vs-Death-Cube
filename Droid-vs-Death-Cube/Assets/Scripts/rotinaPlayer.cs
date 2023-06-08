@@ -14,6 +14,9 @@ public class rotinaPlayer : MonoBehaviour
 
     private float velocidade = 7.5f; //controla a velocidade do jogador
     public float destroyDelay = 0.5f; // Tempo de espera antes de destruir o objeto inimigo
+    public static int foodPillAb_player = 0;
+    public static int powerPillAb_player = 0;
+
 
     private Transform myCamera;
 
@@ -27,7 +30,10 @@ public class rotinaPlayer : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        // Debug.Log(foodPillAb_player);
+        Debug.Log(powerPillAb_player);
+
         inputs.Set(Input.GetAxis("Horizontal"),0, Input.GetAxis("Vertical")); //define os valores de entrada do teclado apenas para o eixo x e z
         character.Move(Vector3.down*Time.deltaTime); //simular gravidade
 

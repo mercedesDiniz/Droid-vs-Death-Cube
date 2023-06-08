@@ -32,20 +32,20 @@ public class rotinaInimigosB : MonoBehaviour
     void Update()
     {
         if (player != null){
-                // Calcula a direção do movimento em relação ao jogador
-                Vector3 direction = player.transform.position - transform.position;
-                direction.Normalize();
+            // Calcula a direção do movimento em relação ao jogador
+            Vector3 direction = player.transform.position - transform.position;
+            direction.Normalize();
 
-                // Move o inimigo na direção do jogador
-                animator.SetBool("andando", true);
-                animator.SetBool("soco", false);
-                // transform.position += direction * moveSpeed * Time.deltaTime;
+            // Move o inimigo na direção do jogador
+            animator.SetBool("andando", true);
+            animator.SetBool("soco", false);
+            // transform.position += direction * moveSpeed * Time.deltaTime;
 
-                // Orienta o inimigo para olhar na direção do movimento
-                transform.LookAt(player.transform);
+            // Orienta o inimigo para olhar na direção do movimento
+            transform.LookAt(player.transform);
 
-                // Move o inimigo na direção do jogador usando o Rigidbody
-                rb.MovePosition(transform.position + direction * moveSpeed * Time.deltaTime);
+            // Move o inimigo na direção do jogador usando o Rigidbody
+            rb.MovePosition(transform.position + direction * moveSpeed * Time.deltaTime);
         }
     }
 
