@@ -13,6 +13,9 @@ TagManager:
   - player
   - foodPill
   - powerPill
+  - Portal0
+  - Portal1
+  - Portal2
   layers:
   - Default
   - TransparentFX
