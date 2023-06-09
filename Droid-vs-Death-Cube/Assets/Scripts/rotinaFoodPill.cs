@@ -17,7 +17,7 @@ public class rotinaFoodPill : MonoBehaviour
     void Start()
     {
         initialScale = transform.localScale;
-        playerScript = GameObject.FindGameObjectWithTag("Robot").GetComponent<rotinaPlayer>();
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<rotinaPlayer>();
     }
 
     // Update is called once per frame

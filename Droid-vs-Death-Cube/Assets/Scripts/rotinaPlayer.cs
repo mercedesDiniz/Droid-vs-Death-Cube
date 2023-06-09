@@ -31,8 +31,8 @@ public class rotinaPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        // Debug.Log(foodPillAb_player);
-        Debug.Log(powerPillAb_player);
+         Debug.Log(foodPillAb_player);
+        //Debug.Log(powerPillAb_player);
 
         inputs.Set(Input.GetAxis("Horizontal"),0, Input.GetAxis("Vertical")); //define os valores de entrada do teclado apenas para o eixo x e z
         character.Move(Vector3.down*Time.deltaTime); //simular gravidade
@@ -78,6 +78,30 @@ public class rotinaPlayer : MonoBehaviour
             animator.SetBool("morreu", true);
             // Aguarda o atraso antes de destruir o objeto inimigo
             Invoke("DestroyEnemy", destroyDelay);
+        }
+    }
+
+    // Detecta colisão com o Portal
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.CompareTag("Portal0"))
+        {
+            // Definir a posição de destino do teleport
+            Vector3 destino = new Vector3(0f, 40f, 0f); // Substitua pelos valores desejados para a posição de destino
+
+            // Teleportar o jogador para a posição de destino
+            //character.enabled = false; // Desabilitar o CharacterController temporariamente para mover o jogador diretamente
+            transform.position = destino;
+            //character.enabled = true; // Reabilitar o CharacterController após o teleport
+        }
+        if (collision.gameObject.CompareTag("Portal1"))
+        {
+            // Definir a posição de destino do teleport
+            Vector3 destino = new Vector3(0f, 80f, 0f); // Substitua pelos valores desejados para a posição de destino
+
+            // Teleportar o jogador para a posição de destino
+            //character.enabled = false; // Desabilitar o CharacterController temporariamente para mover o jogador diretamente
+            transform.position = destino;
+            //character.enabled = true; // Reabilitar o CharacterController após o teleport
         }
     }
 
