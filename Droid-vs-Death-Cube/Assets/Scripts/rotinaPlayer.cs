@@ -93,6 +93,16 @@ public class rotinaPlayer : MonoBehaviour
             transform.position = destino;
             //character.enabled = true; // Reabilitar o CharacterController após o teleport
         }
+        if (collision.gameObject.CompareTag("Portal1"))
+        {
+            // Definir a posição de destino do teleport
+            Vector3 destino = new Vector3(0f, 80f, 0f); // Substitua pelos valores desejados para a posição de destino
+
+            // Teleportar o jogador para a posição de destino
+            //character.enabled = false; // Desabilitar o CharacterController temporariamente para mover o jogador diretamente
+            transform.position = destino;
+            //character.enabled = true; // Reabilitar o CharacterController após o teleport
+        }
     }
 
     private void DestroyEnemy()
