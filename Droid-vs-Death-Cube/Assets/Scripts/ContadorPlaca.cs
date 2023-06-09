@@ -17,6 +17,7 @@ public class ContadorPlaca : MonoBehaviour
     }
 
     private void calculaPlacar(){
-        texMesh.text = (rotinaPlayer.foodPillAb_player).ToString("00");
+        texMesh.text = "Food Pill: "+(rotinaPlayer.foodPillAb_player).ToString("00")+"\nPower Pill: "+(rotinaPlayer.powerPillAb_player).ToString("00");
+        
     }
 }
