@@ -400,6 +400,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 756203342281151882, guid: f8ccc4f5897100b3ba4dbcc13e35df32,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.36
+      objectReference: {fileID: 0}
     - target: {fileID: 3760123843664766720, guid: f8ccc4f5897100b3ba4dbcc13e35df32,
         type: 3}
       propertyPath: m_RootOrder
@@ -459,6 +464,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Distribuicao_Inimigos_N1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8085114075726412633, guid: f8ccc4f5897100b3ba4dbcc13e35df32,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8ccc4f5897100b3ba4dbcc13e35df32, type: 3}
@@ -1213,7 +1223,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592078461}
-  m_LocalRotation: {x: 0.110622324, y: -0.4035721, z: 0.049227085, w: 0.90690076}
+  m_LocalRotation: {x: 0.110622324, y: -0.40357205, z: 0.04922708, w: 0.9069007}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
