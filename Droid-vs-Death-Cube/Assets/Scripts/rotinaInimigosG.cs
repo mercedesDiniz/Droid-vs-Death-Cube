@@ -34,6 +34,12 @@ public class rotinaInimigosG : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Encontra todos os objetos de Food Pill na cena
+        GameObject[] foodPillArray = GameObject.FindGameObjectsWithTag("foodPill");
+
+        // Adiciona as Food Pills encontradas à lista
+        foodPills = new List<GameObject>(foodPillArray);
+
         if (foodPills != null && foodPills.Count > 0)
         {
             GameObject closestFoodPill = null;
