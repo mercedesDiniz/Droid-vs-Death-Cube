@@ -17,6 +17,7 @@ public class rotinaPlayer : MonoBehaviour
     public static int foodPillAb_player = 0;
     public static int powerPillAb_player = 0;
 
+    private rotinaPlayer playerScript;
 
     private Transform myCamera;
 
@@ -26,12 +27,14 @@ public class rotinaPlayer : MonoBehaviour
         character = GetComponent<CharacterController>(); //atribuir o componente CharacterController em character
         animator = GetComponent<Animator>();
         myCamera = Camera.main.transform;
+
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<rotinaPlayer>();
     }  
 
     // Update is called once per frame
     void Update()
     {   
-         Debug.Log(foodPillAb_player);
+         Debug.Log("Food Pill absorvidas: "+foodPillAb_player);
         //Debug.Log(powerPillAb_player);
 
         inputs.Set(Input.GetAxis("Horizontal"),0, Input.GetAxis("Vertical")); //define os valores de entrada do teclado apenas para o eixo x e z
@@ -52,7 +55,7 @@ public class rotinaPlayer : MonoBehaviour
 
 
 
-        if(Input.GetKey(KeyCode.Space) && animator.GetBool("morreu") == false)
+        if(Input.GetKey(KeyCode.Space) && socoStatus() && animator.GetBool("morreu") == false)
         {
             animator.SetBool("soco", true);
             animator.SetBool("andando", false);
@@ -109,6 +112,14 @@ public class rotinaPlayer : MonoBehaviour
     {
         Destroy(gameObject);
         SceneManager.LoadScene(telaGamerOver);
+    }
+
+    private bool socoStatus()
+    {
+        if(rotinaPlayer.powerPillAb_player>=1)
+            return true;
+        else
+            return false;
     }
 
 }
