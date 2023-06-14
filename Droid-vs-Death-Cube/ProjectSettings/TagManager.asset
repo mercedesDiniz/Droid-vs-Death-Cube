@@ -16,6 +16,9 @@ TagManager:
   - powerPillTurbo
   - Portal0
   - Portal1
+  - InimigosN1
+  - InimigosN2
+  - InimigosN0
   layers:
   - Default
   - TransparentFX

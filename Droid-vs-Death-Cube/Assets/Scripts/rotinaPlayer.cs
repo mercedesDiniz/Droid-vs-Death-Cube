@@ -16,6 +16,7 @@ public class rotinaPlayer : MonoBehaviour
     public float destroyDelay = 0.5f; // Tempo de espera antes de destruir o objeto inimigo
     public static int foodPillAb_player = 0;
     public static int powerPillAb_player = 0;
+    public static int nivelAtualDoPlayer = 0; // nivel inicial
 
     private rotinaPlayer playerScript;
 
@@ -88,6 +89,9 @@ public class rotinaPlayer : MonoBehaviour
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Portal0"))
         {
+            // Atualiza o nivel atual do player
+            nivelAtualDoPlayer = 1; // nivel 1
+
             // Definir a posição de destino do teleport
             Vector3 destino = new Vector3(0f, 40f, 0f); // Substitua pelos valores desejados para a posição de destino
 
@@ -98,6 +102,9 @@ public class rotinaPlayer : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Portal1"))
         {
+            // Atualiza o nivel atual do player
+            nivelAtualDoPlayer = 2; // nivel 2
+
             // Definir a posição de destino do teleport
             Vector3 destino = new Vector3(0f, 80f, 0f); // Substitua pelos valores desejados para a posição de destino
 
