@@ -31,17 +31,15 @@ public class rotinaNivel : MonoBehaviour
         {
             case 0:
                 habilitaInimigosN0();
-                //desabilitaInimigosN1();
-                //desabilitaInimigosN2();
+                desabilitaInimigosN1();
+                desabilitaInimigosN2();
                 break;
             case 1:
-                //desabilitaInimigosN0();
+                desabilitaInimigosN0();
                 habilitaInimigosN1();
-                //desabilitaInimigosN1();
                 break;
             case 2:
-                //desabilitaInimigosN0();
-                //desabilitaInimigosN1();
+                desabilitaInimigosN1();
                 habilitaInimigosN2();
                 break;
             default:
