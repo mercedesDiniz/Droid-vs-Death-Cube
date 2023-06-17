@@ -18,6 +18,8 @@ public class rotinaPlayer : MonoBehaviour
     public static int powerPillAb_player = 0;
     public static int nivelAtualDoPlayer = 0; // nivel inicial
 
+    public static bool attack = false;
+
     private rotinaPlayer playerScript;
 
     private Transform myCamera;
@@ -55,33 +57,51 @@ public class rotinaPlayer : MonoBehaviour
         }
 
 
-
+        //Animado soco
         if(Input.GetKey(KeyCode.Space) && socoStatus() && animator.GetBool("morreu") == false)
         {
             animator.SetBool("soco", true);
             animator.SetBool("andando", false);
             inputs = Vector3.zero;
+            rotinaPlayer.attack = true;
         }
+        //Animação de andar 
         else if (inputs != Vector3.zero && Input.GetKey(KeyCode.Space)==false && animator.GetBool("morreu") == false)
         {
             character.Move(transform.forward * inputs.magnitude* Time.deltaTime * velocidade);
             animator.SetBool("andando", true);
             animator.SetBool("soco", false);
+            rotinaPlayer.attack = false;
             //transform.forward = Vector3.Slerp(transform.forward, inputs, Time.deltaTime*10); //suavizar a rotação do personagem
         }
+        //Animação de parado
         else if (inputs == Vector3.zero && Input.GetKey(KeyCode.Space)==false && animator.GetBool("morreu") == false)
         {
             animator.SetBool("andando", false);
             animator.SetBool("soco", false);
+            rotinaPlayer.attack = false;
         }
     }
 
     // Detecta colisão com os Inimigos
     private void OnCollisionStay(Collision collision) {
+        //if(collision.gameObject.CompareTag("InimigoR") || collision.gameObject.CompareTag("InimigoG") || collision.gameObject.CompareTag("InimigoB") && attack==true){
+        //    //animator.SetBool("morreu", true);
+        //    //// Aguarda o atraso antes de destruir o objeto inimigo
+        //    //Invoke("DestroyEnemy", destroyDelay);
+        //    rotinaPlayer.powerPillAb_player -=1;
+        //}
         if(collision.gameObject.CompareTag("InimigoR") || collision.gameObject.CompareTag("InimigoG") || collision.gameObject.CompareTag("InimigoB")){
-            animator.SetBool("morreu", true);
-            // Aguarda o atraso antes de destruir o objeto inimigo
-            Invoke("DestroyEnemy", destroyDelay);
+            if (attack)
+            {
+                rotinaPlayer.powerPillAb_player -=1;
+            }
+            else
+            {
+                animator.SetBool("morreu", true);
+                // Aguarda o atraso antes de destruir o objeto inimigo
+                Invoke("DestroyEnemy", destroyDelay);
+            }
         }
     }
 
