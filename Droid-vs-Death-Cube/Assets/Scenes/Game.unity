@@ -411,7 +411,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb40ba3766c1bb4c804b07dfc741852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDelay: 0.5
 --- !u!1001 &338796517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -676,7 +675,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   telaGamerOver: GamerOver
   telaVictory: Victory
-  destroyDelay: 0.5
 --- !u!95 &457057577
 Animator:
   serializedVersion: 5
@@ -866,7 +864,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb40ba3766c1bb4c804b07dfc741852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDelay: 0.5
 --- !u!1 &493564727
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,7 +983,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &509843520
 RectTransform:
@@ -1005,7 +1002,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 753, y: 366}
+  m_AnchoredPosition: {x: 425, y: 330}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &509843521
@@ -1639,7 +1636,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb40ba3766c1bb4c804b07dfc741852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDelay: 0.5
 --- !u!1 &684148515
 GameObject:
   m_ObjectHideFlags: 3
@@ -1878,7 +1874,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb40ba3766c1bb4c804b07dfc741852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDelay: 0.5
 --- !u!1 &902749914 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2830975982307947775, guid: 1819dabbe40a30e83b111c07fcaf5947,
@@ -1897,7 +1892,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb40ba3766c1bb4c804b07dfc741852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDelay: 0.5
 --- !u!1 &947301414 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4450505731957685298, guid: f8ccc4f5897100b3ba4dbcc13e35df32,
@@ -1916,7 +1910,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb40ba3766c1bb4c804b07dfc741852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDelay: 0.5
 --- !u!1 &978948391 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3706656172719061626, guid: 1819dabbe40a30e83b111c07fcaf5947,
@@ -1935,7 +1928,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb40ba3766c1bb4c804b07dfc741852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDelay: 0.5
 --- !u!1 &1065892987 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5001493909455439169, guid: fe398371edfcfe2c88fef8ddc7557adf,
@@ -1954,7 +1946,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb40ba3766c1bb4c804b07dfc741852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDelay: 0.5
 --- !u!1 &1209649809 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 87048620919082800, guid: f8ccc4f5897100b3ba4dbcc13e35df32,
@@ -1973,7 +1964,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb40ba3766c1bb4c804b07dfc741852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDelay: 0.5
 --- !u!1 &1216030862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2066,7 +2056,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb40ba3766c1bb4c804b07dfc741852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDelay: 0.5
 --- !u!1 &1379109123 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6893491192590393303, guid: f8ccc4f5897100b3ba4dbcc13e35df32,
@@ -2085,7 +2074,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb40ba3766c1bb4c804b07dfc741852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDelay: 0.5
 --- !u!1 &1404079761
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,7 +2091,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &1404079762
 RectTransform:
@@ -2122,7 +2110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -753, y: 366}
+  m_AnchoredPosition: {x: -425, y: 330}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1404079763
@@ -2253,7 +2241,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb40ba3766c1bb4c804b07dfc741852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDelay: 0.5
 --- !u!1 &1569285839 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5445850551850848594, guid: f8ccc4f5897100b3ba4dbcc13e35df32,
@@ -2272,7 +2259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb40ba3766c1bb4c804b07dfc741852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDelay: 0.5
 --- !u!1001 &1622158860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2827,7 +2813,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb40ba3766c1bb4c804b07dfc741852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDelay: 0.5
 --- !u!1 &2067937013 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2772000215906331201, guid: f8ccc4f5897100b3ba4dbcc13e35df32,
@@ -2846,7 +2831,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb40ba3766c1bb4c804b07dfc741852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDelay: 0.5
 --- !u!1 &2102210332
 GameObject:
   m_ObjectHideFlags: 3
@@ -2916,7 +2900,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102210332}
-  m_LocalRotation: {x: 0.19944783, y: -0.39675733, z: 0.08875456, w: 0.8915867}
+  m_LocalRotation: {x: 0.19944784, y: -0.39675733, z: 0.08875456, w: 0.8915867}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

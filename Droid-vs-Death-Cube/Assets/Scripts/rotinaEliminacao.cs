@@ -8,7 +8,7 @@ public class rotinaEliminacao : MonoBehaviour
     private rotinaPlayer playerScript;
     private Animator animator;
     private BoxCollider boxCollider;
-    public float destroyDelay = 1.0f;
+    private float destroyDelay = 3.0f;
     // Start is called before the first frame update
     void Start()
     {

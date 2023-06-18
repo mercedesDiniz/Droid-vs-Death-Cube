@@ -13,7 +13,7 @@ public class rotinaPlayer : MonoBehaviour
     private Vector3 inputs; //receber as entradas do teclado
 
     private float velocidade = 7.5f; //controla a velocidade do jogador
-    public float destroyDelay = 0.5f; // Tempo de espera antes de destruir o objeto inimigo
+    private float destroyDelay = 3.0f; // Tempo de espera antes de destruir o objeto inimigo
     public static int foodPillAb_player = 0;
     public static int powerPillAb_player = 0;
     public static int nivelAtualDoPlayer = 0; // nivel inicial
