@@ -3,21 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class ContadorPlaca : MonoBehaviour
-{
+public class ContadorNivel : MonoBehaviour
+{   
     private rotinaPlayer playerScript;
     private TextMeshProUGUI texMesh;
-    
+
     // Start is called before the first frame update
     void Start()
     {
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<rotinaPlayer>();
         texMesh = GetComponent<TextMeshProUGUI>();
-        InvokeRepeating(nameof(calculaPlacar), 0, 1f);
+        InvokeRepeating(nameof(calculaNivel), 0, 1f);   
     }
 
-    private void calculaPlacar(){
-        texMesh.text = "Food: "+(rotinaPlayer.foodPillAb_player).ToString("0")+" | Power: "+(rotinaPlayer.powerPillAb_player).ToString("0");
-        
+    private void calculaNivel(){
+        texMesh.text = "Nivel: "+(rotinaPlayer.nivelAtualDoPlayer).ToString("0")+"/2";      
     }
 }
