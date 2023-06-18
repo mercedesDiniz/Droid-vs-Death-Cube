@@ -92,15 +92,19 @@ public class rotinaPlayer : MonoBehaviour
         //    rotinaPlayer.powerPillAb_player -=1;
         //}
         if(collision.gameObject.CompareTag("InimigoR") || collision.gameObject.CompareTag("InimigoG") || collision.gameObject.CompareTag("InimigoB")){
-            if (attack)
+            if (!attack)
             {
-                rotinaPlayer.powerPillAb_player -=1;
-            }
-            else
-            {
+            //     //rotinaPlayer.powerPillAb_player -=1;
+            // }
+            // else
+            // {
                 animator.SetBool("morreu", true);
                 // Aguarda o atraso antes de destruir o objeto inimigo
                 Invoke("DestroyEnemy", destroyDelay);
+                // Zerando o placa e voltando para o nivel 0
+                foodPillAb_player = 0;
+                powerPillAb_player = 0;
+                nivelAtualDoPlayer = 0;
             }
         }
     }

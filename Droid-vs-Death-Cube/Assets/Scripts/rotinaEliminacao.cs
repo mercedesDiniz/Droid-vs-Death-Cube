@@ -37,5 +37,6 @@ public class rotinaEliminacao : MonoBehaviour
     private void DestroyEnemy()
     {
         Destroy(gameObject);
+        rotinaPlayer.powerPillAb_player -=1; // usou a power pill p/ eliminar o inimigo
     }
 }
