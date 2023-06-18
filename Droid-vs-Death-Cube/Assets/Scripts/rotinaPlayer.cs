@@ -86,11 +86,11 @@ public class rotinaPlayer : MonoBehaviour
             rotinaPlayer.attack = false;
         }
 
-        else if (Input.GetKey(KeyCode.Escape))
-        {
-            Debug.Log("Sair do Jogo");
-            Application.Quit();
-        }
+        //else if (Input.GetKey(KeyCode.Escape))
+        //{
+        //    Debug.Log("Sair do Jogo");
+        //    Application.Quit();
+        //}
     }
 
     // Detecta colisão com os Inimigos
