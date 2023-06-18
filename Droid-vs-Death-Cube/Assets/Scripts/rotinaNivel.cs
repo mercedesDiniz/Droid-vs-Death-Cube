@@ -75,6 +75,7 @@ public class rotinaNivel : MonoBehaviour
     public void habilitaInimigosN2()
     {
         inimigos_nivel2.SetActive(true);
+        rotinaPlayer.inimigosN2Iniciados = true;
     }
 
     public void desabilitaInimigosN2()

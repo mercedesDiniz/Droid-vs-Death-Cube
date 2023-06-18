@@ -42,7 +42,11 @@ public class rotinaPowerPill : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             absorvida = true;
-            rotinaPlayer.powerPillAb_player += 1;
+            if(rotinaPlayer.nivelAtualDoPlayer == 2){
+                rotinaPlayer.powerPillAb_player += 3;
+            }else{
+                rotinaPlayer.powerPillAb_player += 1;
+            }
         }
         if (collision.gameObject.CompareTag("InimigoG") || collision.gameObject.CompareTag("InimigoR"))
         {

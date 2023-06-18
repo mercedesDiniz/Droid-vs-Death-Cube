@@ -17,6 +17,7 @@ public class rotinaPlayer : MonoBehaviour
     public static int foodPillAb_player = 0;
     public static int powerPillAb_player = 0;
     public static int nivelAtualDoPlayer = 0; // nivel inicial
+    public static bool inimigosN2Iniciados = false;
 
     public static bool attack = false;
 
@@ -32,12 +33,15 @@ public class rotinaPlayer : MonoBehaviour
         myCamera = Camera.main.transform;
 
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<rotinaPlayer>();
+        victoryChecking();
     }  
 
     // Update is called once per frame
     void Update()
-    {   
-         Debug.Log("Food Pill absorvidas: "+foodPillAb_player);
+    {   // Verifica as condições de Vitoria
+        victoryChecking();
+
+        //Debug.Log("Food Pill absorvidas: "+foodPillAb_player);
         //Debug.Log(powerPillAb_player);
 
         inputs.Set(Input.GetAxis("Horizontal"),0, Input.GetAxis("Vertical")); //define os valores de entrada do teclado apenas para o eixo x e z
@@ -139,11 +143,6 @@ public class rotinaPlayer : MonoBehaviour
         }
     }
 
-    private void DestroyEnemy()
-    {
-        Destroy(gameObject);
-        SceneManager.LoadScene(telaGamerOver);
-    }
 
     private bool socoStatus()
     {
@@ -152,6 +151,47 @@ public class rotinaPlayer : MonoBehaviour
         else
             return false;
     }
+
+    
+    private void victoryChecking()
+    {
+        if (nivelAtualDoPlayer == 2 && inimigosN2Iniciados)
+        {
+            bool allEnemiesDestroyed = true;
+
+            // Obtém todos os inimigos do último nível
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("InimigoR");
+
+            // Verifica se ainda existem inimigos ativos
+            foreach (GameObject enemy in enemies)
+            {
+                if (enemy.activeSelf)
+                {
+                    allEnemiesDestroyed = false;
+                    break;
+                }
+            }
+
+            if (allEnemiesDestroyed)
+            {   
+                // Zerando o placa e voltando para o nivel 0
+                foodPillAb_player = 0;
+                powerPillAb_player = 0;
+                nivelAtualDoPlayer = 0;
+                inimigosN2Iniciados = false;
+
+                SceneManager.LoadScene(telaVictory);
+            }
+        }
+    }
+
+
+    private void DestroyEnemy()
+    {
+        Destroy(gameObject);
+        SceneManager.LoadScene(telaGamerOver);
+    }
+    
 
 }
 
