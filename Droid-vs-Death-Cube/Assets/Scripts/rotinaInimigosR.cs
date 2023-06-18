@@ -8,7 +8,7 @@ public class rotinaInimigosR : MonoBehaviour
     private GameObject player; // Referência para o objeto do jogador
     private Rigidbody rb; // Componente Rigidbody do inimigo
 
-    public float moveSpeed = 3.5f; // Velocidade de movimento do inimigo
+    public float moveSpeed = 6f; // Velocidade de movimento do inimigo
     public float punchDistance = 1f; // Distância de aproximação antes de ativar a colisão
 
     // Start is called before the first frame update
