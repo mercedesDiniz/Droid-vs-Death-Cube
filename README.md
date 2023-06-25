@@ -19,17 +19,39 @@ Descrever e Implementar um ambiente com a ferramenta (Unity) através da defini�
 
 ## Project preview:
 - Jogo finalizado:
-    - Aplicação da modelagem:
+    - Personagens:
+    <div style="display: flex; align-items: center;">
+        <div style="flex: 1;">
+            <img src="docs/imgs/player.png" alt="Droid do player" width="300" height="300" />
+        </div>
+        <div style="flex: 1;">
+            <img src="docs/imgs/Inimigos.png" alt="Droids inimigos" width="600" height="300" />
+        </div>
+    </div>
 
-    - Aplicação das Transformações:
+    - Cenário:
+    <div style="display: flex; align-items: center;">
+        <div style="flex: 1;">
+            <img src="docs/imgs/Cube.png" alt="Cubo" width="400" height="300" />
+        </div>
+        <div style="flex: 1;">
+            <img src="docs/imgs/Maze.png" alt="Mapa do labirinto" width="300" height="300" />
+        </div>
+    </div>
+
+
+    - Aplicação das Transformações: 
 
 ## References:
 - [Projeto Pacman](https://github.com/mercedesDiniz/Games.c/tree/main/PacMan)
+- [PacMan - 2D modeling project with OpenGL](https://github.com/mercedesDiniz/PacMan_2D)
 - [Curso de Computação Gráfica da USP (2018)](https://edisciplinas.usp.br/course/view.php?id=61213#section-5)
 - [Tutorial Unity ~ by Fredi](https://www.youtube.com/playlist?list=PLkhtU8XJLj-7JQm_STir4bp48DvPz8xDX)
 - [Aprenda como criar um MENU PRINCIPAL na Unity de forma Simples e Elegante](https://www.youtube.com/watch?v=yIaAE9bLxXI&ab_channel=DesenvolvedorUnity)
 - [Something About Pac-Man (Loud Sound and Light Sensitivity Warning)](https://www.youtube.com/watch?v=RR2dlAnP0-I&ab_channel=TerminalMontage)
 - [Occlusion culling](https://docs.unity3d.com/Manual/OcclusionCulling.html)
+- [The Occlusion Culling window](https://docs.unity3d.com/Manual/occlusion-culling-window.html)
+- [Oclusão de Objetos (Unity Occlusion/Frustum Culling) - Otimização de Games](https://www.youtube.com/watch?v=ZxbXJMOcyFc&ab_channel=FernandoMaker)
 - [Chomp Man - 3D Game Kit & Tutorial](https://assetstore.unity.com/packages/templates/tutorials/chomp-man-3d-game-kit-tutorial-174982)
 - [Animated Robot Pack](https://quaternius.com/packs/animatedrobot.html)
 - [Magic Effects](https://assetstore.unity.com/packages/vfx/particles/spells/magic-effects-free-247933)
