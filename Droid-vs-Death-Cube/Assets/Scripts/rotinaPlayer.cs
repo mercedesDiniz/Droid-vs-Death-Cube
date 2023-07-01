@@ -9,19 +9,19 @@ public class rotinaPlayer : MonoBehaviour
     [SerializeField] private string telaVictory;
     
     private CharacterController character; //referencia os componentes de controle do jogador
-    private Animator animator; //
+    private Animator animator; //referencia as  animações do player
     private Vector3 inputs; //receber as entradas do teclado
 
     private float velocidade = 7.5f; //controla a velocidade do jogador
-    private float destroyDelay = 2.0f; // Tempo de espera antes de destruir o objeto inimigo
-    public static int foodPillAb_player = 0;
-    public static int powerPillAb_player = 0;
-    public static int nivelAtualDoPlayer = 0; // nivel inicial
+    private float destroyDelay = 2.0f; //Tempo de espera antes de destruir o objeto inimigo
+    public static int foodPillAb_player = 0; //Inicializa o numero de pilulas de comida
+    public static int powerPillAb_player = 0;//Inicializa o numero de pilulas de poder
+    public static int nivelAtualDoPlayer = 0; //nivel inicial
     public static bool inimigosN2Iniciados = false;
 
     public static bool attack = false;
 
-    private rotinaPlayer playerScript;
+    private rotinaPlayer playerScript; // Referência ao script de controle do jogador
 
     private Transform myCamera;
 
@@ -33,7 +33,7 @@ public class rotinaPlayer : MonoBehaviour
         myCamera = Camera.main.transform;
 
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<rotinaPlayer>();
-        victoryChecking();
+        victoryChecking(); // Verifica as condições de vitória
     }  
 
     // Update is called once per frame
@@ -44,16 +44,18 @@ public class rotinaPlayer : MonoBehaviour
         //Debug.Log("Food Pill absorvidas: "+foodPillAb_player);
         //Debug.Log(powerPillAb_player);
 
-        inputs.Set(Input.GetAxis("Horizontal"),0, Input.GetAxis("Vertical")); //define os valores de entrada do teclado apenas para o eixo x e z
+        //define os valores de entrada do teclado apenas para o eixo x e z
+        inputs.Set(Input.GetAxis("Horizontal"),0, Input.GetAxis("Vertical")); 
         character.Move(Vector3.down*Time.deltaTime); //simular gravidade
 
         var forward = myCamera.TransformDirection(Vector3.forward);
-        forward.y = 0;
+        forward.y = 0; // Mantém apenas as componentes x e z
 
         var right = myCamera.TransformDirection(Vector3.right);
 
         Vector3 direcao = inputs.x * right + inputs.z * forward;
 
+        // Se houver entrada de movimento e o jogador não estiver morto, ajusta a rotação do jogador
         if (inputs != Vector3.zero && direcao.magnitude >0.1f && animator.GetBool("morreu") == false)
         {
             Quaternion freeRotation = Quaternion.LookRotation(direcao.normalized, transform.up);
@@ -61,7 +63,7 @@ public class rotinaPlayer : MonoBehaviour
         }
 
 
-        //Animado soco
+        //Animação do soco
         if(Input.GetKey(KeyCode.Space) && socoStatus() && animator.GetBool("morreu") == false)
         {
             animator.SetBool("soco", true);
@@ -86,28 +88,13 @@ public class rotinaPlayer : MonoBehaviour
             rotinaPlayer.attack = false;
         }
 
-        //else if (Input.GetKey(KeyCode.Escape))
-        //{
-        //    Debug.Log("Sair do Jogo");
-        //    Application.Quit();
-        //}
     }
 
     // Detecta colisão com os Inimigos
     private void OnCollisionStay(Collision collision) {
-        //if(collision.gameObject.CompareTag("InimigoR") || collision.gameObject.CompareTag("InimigoG") || collision.gameObject.CompareTag("InimigoB") && attack==true){
-        //    //animator.SetBool("morreu", true);
-        //    //// Aguarda o atraso antes de destruir o objeto inimigo
-        //    //Invoke("DestroyEnemy", destroyDelay);
-        //    rotinaPlayer.powerPillAb_player -=1;
-        //}
         if(collision.gameObject.CompareTag("InimigoR") || collision.gameObject.CompareTag("InimigoG") || collision.gameObject.CompareTag("InimigoB")){
             if (!attack)
             {
-            //     //rotinaPlayer.powerPillAb_player -=1;
-            // }
-            // else
-            // {
                 animator.SetBool("morreu", true);
                 // Aguarda o atraso antes de destruir o objeto inimigo
                 Invoke("DestroyEnemy", destroyDelay);
@@ -149,7 +136,7 @@ public class rotinaPlayer : MonoBehaviour
         }
     }
 
-
+    // Verifica se o jogador tem pílulas de poder suficientes para realizar um soco
     private bool socoStatus()
     {
         if(rotinaPlayer.powerPillAb_player>=1)
@@ -158,7 +145,7 @@ public class rotinaPlayer : MonoBehaviour
             return false;
     }
 
-    
+    // Verifica as condições de vitória    
     private void victoryChecking()
     {
         if (nivelAtualDoPlayer == 2 && inimigosN2Iniciados)
@@ -191,14 +178,12 @@ public class rotinaPlayer : MonoBehaviour
         }
     }
 
-
     private void DestroyEnemy()
     {
         Destroy(gameObject);
         SceneManager.LoadScene(telaGamerOver);
     }
     
-
 }
 
 

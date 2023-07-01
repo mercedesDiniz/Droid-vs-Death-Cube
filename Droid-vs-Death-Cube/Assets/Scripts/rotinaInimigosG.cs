@@ -45,6 +45,7 @@ public class rotinaInimigosG : MonoBehaviour
             GameObject closestFoodPill = null;
             float closestDistance = Mathf.Infinity;
 
+            // Encontra a Food Pill mais próxima do inimigo
             foreach (GameObject pill in foodPills)
             {
                 float distance = Vector3.Distance(transform.position, pill.transform.position);
@@ -61,8 +62,10 @@ public class rotinaInimigosG : MonoBehaviour
                 Vector3 direction = closestFoodPill.transform.position - transform.position;
                 direction.Normalize();
 
+                // Faz o inimigo olhar na direção da Food Pill mais próxima
                 transform.LookAt(closestFoodPill.transform);
                 animator.SetBool("andando", true);
+                // Move o inimigo em direção à Food Pill
                 rb.MovePosition(transform.position + direction * moveSpeed * Time.deltaTime);
 
                 // Verifica se chegou perto o suficiente da Food Pill

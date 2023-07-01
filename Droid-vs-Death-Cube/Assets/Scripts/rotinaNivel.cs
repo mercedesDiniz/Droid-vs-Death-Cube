@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class rotinaNivel : MonoBehaviour
 {
-    private rotinaPlayer playerScript;
-    public GameObject inimigos_nivel0;
-    public GameObject inimigos_nivel1;
-    public GameObject inimigos_nivel2;
+    private rotinaPlayer playerScript; // Referência ao script rotinaPlayer
+    public GameObject inimigos_nivel0; // GameObject dos inimigos do nível 0
+    public GameObject inimigos_nivel1; // GameObject dos inimigos do nível 1
+    public GameObject inimigos_nivel2; // GameObject dos inimigos do nível 2
 
     // Start is called before the first frame update
     void Start()
@@ -30,20 +30,20 @@ public class rotinaNivel : MonoBehaviour
         switch (rotinaPlayer.nivelAtualDoPlayer)
         {
             case 0:
-                habilitaInimigosN0();
-                desabilitaInimigosN1();
-                desabilitaInimigosN2();
+                habilitaInimigosN0(); // Habilita os inimigos do nível 0
+                desabilitaInimigosN1(); // Desabilita os inimigos do nível 1
+                desabilitaInimigosN2(); // Desabilita os inimigos do nível 2
                 break;
             case 1:
-                desabilitaInimigosN0();
-                habilitaInimigosN1();
+                desabilitaInimigosN0(); // Desabilita os inimigos do nível 0
+                habilitaInimigosN1(); // Habilita os inimigos do nível 1
                 break;
             case 2:
-                desabilitaInimigosN1();
-                habilitaInimigosN2();
+                desabilitaInimigosN1(); // Desabilita os inimigos do nível 1
+                habilitaInimigosN2(); // Habilita os inimigos do nível 2
                 break;
             default:
-                desabilitaTodosInimigos();
+                desabilitaTodosInimigos(); // Desabilita todos os inimigos
                 break;
         }
         

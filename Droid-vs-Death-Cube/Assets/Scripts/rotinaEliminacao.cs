@@ -5,10 +5,10 @@ using UnityEngine;
 public class rotinaEliminacao : MonoBehaviour
 {
     //public GameObject inimigo;
-    private rotinaPlayer playerScript;
-    private Animator animator;
-    private BoxCollider boxCollider;
-    private float destroyDelay = 3.0f;
+    private rotinaPlayer playerScript; // Referência ao script rotinaPlayer
+    private Animator animator; // Compoenente responsável pela animação do inimigo
+    private BoxCollider boxCollider; 
+    private float destroyDelay = 3.0f; // Tempo de espera antes de destruir o objeto
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +24,10 @@ public class rotinaEliminacao : MonoBehaviour
         
     }
 
+    //Verifica a colisão 
     private void OnCollisionEnter(Collision collision)
     {
+        //Verifica o player esta fazendo a ação de ataque
         if(collision.gameObject.CompareTag("Player") && rotinaPlayer.attack)
         {
             boxCollider.enabled = false;
@@ -34,6 +36,8 @@ public class rotinaEliminacao : MonoBehaviour
             // Aguarda o atraso antes de destruir o objeto inimigo
         }
     }
+    
+    // Destroi o objeto do inimigo
     private void DestroyEnemy()
     {
         Destroy(gameObject);

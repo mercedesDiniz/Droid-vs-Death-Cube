@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class rotinaFoodPill : MonoBehaviour
 {
-    private rotinaPlayer playerScript;
+    private rotinaPlayer playerScript; // Referência ao script de controle do jogador
 
     public float scaleSpeed = 0.5f; // Velocidade de redução da escala
     public float destroyDelay = 2f; // Tempo de espera antes de destruir o objeto após desaparecer
 
-    private Vector3 initialScale;
-    private bool isScaling = true;
-    private bool absorvida = false;
+    private Vector3 initialScale; // Escala inicial do objeto
+    private bool isScaling = true; // Indica se o objeto está diminuindo de escala
+    private bool absorvida = false; // Indica se o objeto está diminuindo de escala
 
     // Start is called before the first frame update
     void Start()

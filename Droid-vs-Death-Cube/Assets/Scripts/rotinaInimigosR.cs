@@ -52,9 +52,6 @@ public class rotinaInimigosR : MonoBehaviour
     // Detecta colisão com os Inimigos
     private void OnCollisionStay(Collision collision) {
         if(collision.gameObject.CompareTag("Player")) {
-            // animator.SetBool("andando", false);
-            // animator.SetBool("soco", true);
-
             // Calcula a distância entre o inimigo e o jogador
             float distance = Vector3.Distance(transform.position, player.transform.position);
 
