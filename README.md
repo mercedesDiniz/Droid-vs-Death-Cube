@@ -17,31 +17,6 @@ Descrever e Implementar um ambiente com a ferramenta (Unity) através da defini�
 
 - [Instruções de instalação no Linux](https://docs.unity3d.com/hub/manual/InstallHub.html?_ga=2.55250925.774955003.1685743169-350341800.1679156456#install-hub-linux)
 
-## Project preview:
-- Jogo finalizado:
-    - Personagens:
-    <div style="display: flex; align-items: center;">
-        <div style="flex: 1;">
-            <img src="docs/imgs/player.png" alt="Droid do player" width="300" height="300" />
-        </div>
-        <div style="flex: 1;">
-            <img src="docs/imgs/Inimigos.png" alt="Droids inimigos" width="600" height="300" />
-        </div>
-    </div>
-
-    - Cenário:
-    <div style="display: flex; align-items: center;">
-        <div style="flex: 1;">
-            <img src="docs/imgs/Cube.png" alt="Cubo" width="400" height="300" />
-        </div>
-        <div style="flex: 1;">
-            <img src="docs/imgs/Maze.png" alt="Mapa do labirinto" width="300" height="300" />
-        </div>
-    </div>
-
-
-    - Aplicação das Transformações: 
-
 ## References:
 - [Projeto Pacman](https://github.com/mercedesDiniz/Games.c/tree/main/PacMan)
 - [PacMan - 2D modeling project with OpenGL](https://github.com/mercedesDiniz/PacMan_2D)
