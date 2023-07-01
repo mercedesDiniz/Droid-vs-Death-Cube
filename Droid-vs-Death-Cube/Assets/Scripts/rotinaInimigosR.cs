@@ -48,17 +48,4 @@ public class rotinaInimigosR : MonoBehaviour
             rb.MovePosition(transform.position + direction * moveSpeed * Time.deltaTime);
         }
     }
-
-    // Detecta colisão com os Inimigos
-    private void OnCollisionStay(Collision collision) {
-        if(collision.gameObject.CompareTag("Player")) {
-            // Calcula a distância entre o inimigo e o jogador
-            float distance = Vector3.Distance(transform.position, player.transform.position);
-
-            if (distance <= punchDistance) {
-                animator.SetBool("andando", false);
-                animator.SetBool("soco", true);
-            }
-        }
-    }
 }
